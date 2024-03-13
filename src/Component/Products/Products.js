@@ -6,6 +6,11 @@ import {
   DialogTitle,
   DialogActions,
 } from "@mui/material";
+import "./Products.css";
+import { Link } from "react-router-dom";
+import { MdDelete, MdEdit } from "react-icons/md";
+import MetaData from "../Layout/MetaData";
+
 
 const Products = () => {
   // Retrieve products data from local storage on component mount
@@ -16,7 +21,30 @@ const Products = () => {
     }
   }, []);
 
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([
+    // Default product data to show
+    {
+      id: "1",
+      name: "Product 1",
+      category: "Category 1",
+      quantity: 10,
+      price: 20,
+    },
+    {
+      id: "2",
+      name: "Product 2",
+      category: "Category 2",
+      quantity: 20,
+      price: 30,
+    },
+    {
+      id: "3",
+      name: "Product 3",
+      category: "Category 3",
+      quantity: 30,
+      price: 40,
+    },
+  ]);
   const [productName, setProductName] = useState("");
   const [productStock, setProductStock] = useState("");
   const [productCategory, setProductCategory] = useState("");
@@ -41,12 +69,7 @@ const Products = () => {
   };
 
   const generateId = () => {
-    return (
-      "_" +
-      Math.random()
-        .toString(36)
-        .substr(2, 9)
-    );
+    return "_" + Math.random().toString(36).substr(2, 9);
   };
 
   const addProduct = () => {
@@ -64,7 +87,9 @@ const Products = () => {
   };
 
   const deleteProduct = (productId) => {
-    const updatedProducts = products.filter((product) => product.id !== productId);
+    const updatedProducts = products.filter(
+      (product) => product.id !== productId
+    );
     setProducts(updatedProducts);
     updateLocalStorage(updatedProducts);
   };
@@ -117,10 +142,17 @@ const Products = () => {
 
   return (
     <>
+    <MetaData title={`Products Management`} />
       <div className="products-management">
         <h2>Products Management</h2>
 
-        <div>
+        <div className="top-navigation">
+          <Link to="/">
+            <button id="go-to-dashboard">Go to dashboard</button>
+          </Link>
+        </div>
+
+        <div className="inputDiv">
           <input
             type="text"
             placeholder="Product Name"
@@ -128,16 +160,16 @@ const Products = () => {
             onChange={handleProductNameChange}
           />
           <input
-            type="number"
-            placeholder="Stock Quantity"
-            value={productStock}
-            onChange={handleProductStockChange}
-          />
-          <input
             type="text"
             placeholder="Product Category"
             value={productCategory}
             onChange={handleProductCategoryChange}
+          />
+          <input
+            type="number"
+            placeholder="Stock Quantity"
+            value={productStock}
+            onChange={handleProductStockChange}
           />
           <input
             type="number"
@@ -148,7 +180,7 @@ const Products = () => {
           <button onClick={addProduct}>Add Product</button>
         </div>
 
-        <table>
+        <table id="tableSection">
           <thead>
             <tr>
               <th>Name</th>
@@ -166,8 +198,14 @@ const Products = () => {
                 <td>{product.quantity}</td>
                 <td>{product.price}</td>
                 <td>
-                  <button onClick={() => editProduct(product.id)}>Edit</button>
-                  <button onClick={() => deleteProduct(product.id)}>Delete</button>
+                  <button className="tableBtn" onClick={() => editProduct(product.id)}>Edit</button>
+                  <button className="tableBtn" onClick={() => deleteProduct(product.id)}>
+                    Delete
+                  </button>
+                  <button className="MediaScreen" onClick={() => editProduct(product.id)}><MdEdit /></button>
+                  <button className="MediaScreen" onClick={() => deleteProduct(product.id)}>
+                  <MdDelete />
+                  </button>
                 </td>
               </tr>
             ))}
@@ -178,47 +216,56 @@ const Products = () => {
           aria-labelledby="Simple-dialog-title"
           open={open}
           onClose={AddToggle}
+          className="dialogBox"
         >
-          <form onSubmit={saveUpdateHandler} id="updateForm">
+          <form
+            onSubmit={saveUpdateHandler}
+            className="createForm"
+            id="updateForm"
+          >
             <DialogTitle>Update Inventory</DialogTitle>
             <DialogContent className="submitDialogActions">
               <table className="custom-table">
-                <tr>
-                  <th className="table-header">Name</th>
-                  <th className="table-header">Category</th>
-                  <th className="table-header">Stock Quantity</th>
-                  <th className="table-header">Price</th>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      type="text"
-                      value={productName}
-                      onChange={handleProductNameChange}
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="text"
-                      value={productCategory}
-                      onChange={handleProductCategoryChange}
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="number"
-                      value={productStock}
-                      onChange={handleProductStockChange}
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="number"
-                      value={productPrice}
-                      onChange={handleProductPriceChange}
-                    />
-                  </td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th className="table-header">Name</th>
+                    <th className="table-header">Category</th>
+                    <th className="table-header">Stock Quantity</th>
+                    <th className="table-header">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        value={productName}
+                        onChange={handleProductNameChange}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        value={productCategory}
+                        onChange={handleProductCategoryChange}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        value={productStock}
+                        onChange={handleProductStockChange}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        value={productPrice}
+                        onChange={handleProductPriceChange}
+                      />
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </DialogContent>
             <DialogActions>

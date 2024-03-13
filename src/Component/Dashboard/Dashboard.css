@@ -1,0 +1,79 @@
+.dashboard {
+  padding: 20px;
+}
+
+.dashboard h2 {
+  color: #3b31de;
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: wrap; /* Allow metrics to wrap to a new line on smaller screens */
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.metric {
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.metric h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.metric-box {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.metric p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.navigation button {
+  width: 250px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navigation button:hover {
+  background-color: #0056b3;
+}
+
+.navigation button:focus {
+  outline: none;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .metrics {
+    flex-direction: column; /* Stack metrics vertically on smaller screens */
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation button {
+    margin-bottom: 10px; /* Add vertical spacing between buttons */
+  }
+}
