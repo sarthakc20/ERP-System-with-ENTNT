@@ -10,6 +10,9 @@
 
 ![alt text](image-3.png)
 
+
+- First three(3) products are dummy products. "Add product" to get the number of "Total Products" on the Dashboard.
+
 # Simplified ERP System with React - Documentation
 
 Welcome to the Simplified ERP System built with React! This documentation will guide you through setting up and interacting with the website.
