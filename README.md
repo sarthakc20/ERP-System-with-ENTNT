@@ -2,76 +2,58 @@ Screen Shots:
 
 ![alt text](image.png)
 ![alt text](image-1.png)
+![alt text](image-4.png)
 ![alt text](image-2.png)
 ![alt text](image-3.png)
 
-# Getting Started with Create React App
+# Simplified ERP System with React - Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Simplified ERP System built with React! This documentation will guide you through setting up and interacting with the website.
 
-## Available Scripts
+*Website URL*
+You can access the website at the following URL: Simplified ERP System
 
-In the project directory, you can run:
+*Setup Instructions*
+No setup is required as the website is hosted on Vercel. Simply click on the provided URL to access the ERP system.
+
+*Interacting with the Website*
+The website consists of the following pages:
+
+1. Dashboard: Provides an overview of key metrics and features of the ERP system. You'll find summaries of the total number of products and orders, along with buttons for quick navigation to the Products and Orders management pages.
+
+2. Products Management: This page allows you to manage product listings. You can view a list of products with details such as name, category, price, and stock quantity. Additionally, functionalities to add, edit, and delete products are enabled.
+
+3. Orders Management: Here, you can view and handle orders. A list of orders is displayed, including details such as order ID, customer name, order date, and status. Optionally, you can view order details, update the order status, and delete orders.
+
+4. Orders Calendar View : If implemented, this page provides a calendar interface displaying orders based on their expected delivery dates. You can click on a date to view all orders due for delivery on that day.
+
+*Key Features*
+1. React Components: The project is built using modular React components, ensuring better organization and reusability.
+2. React Router: Navigation between different sections of the ERP system is implemented using React Router, providing a seamless user experience.
+3. Responsive Design: The website is designed to be responsive, ensuring optimal viewing experience across various devices, including desktop and mobile.
+
+*Additional Notes*
+1. Mock Data: The project uses mock data for products and orders for demonstration purposes. You can customize or replace this data with real data from your backend system.
+2. Orders Calendar View Features: The Orders Calendar View is an optional feature that provides a visual representation of orders based on their expected delivery dates.
+
+*Workflow for Creating and Building a React App*
+
+# Initialize React App:
+
+Use create-react-app to bootstrap your React project. This command sets up a new React project with all the necessary files and dependencies:
+
+### `npx create-react-app frontend`
+
+Project Structure:
+
+Explore the project structure created by create-react-app. You'll find files and directories such as src, public, package.json, README.md, etc.
+The src directory contains your React components and other JavaScript files.
+Development:
+
+Open the project in your preferred code editor (e.g., Visual Studio Code).
+
+Start the development server to see your changes in real-time:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This command will launch a development server and open your default web browser with the React app running. Any changes you make to the code will be automatically reflected in the browser.

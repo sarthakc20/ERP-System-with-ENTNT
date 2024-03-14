@@ -223,7 +223,7 @@ const Products = () => {
             className="createForm"
             id="updateForm"
           >
-            <DialogTitle>Update Inventory</DialogTitle>
+            <DialogTitle>Edit Product Details</DialogTitle>
             <DialogContent className="submitDialogActions">
               <table className="custom-table">
                 <thead>
