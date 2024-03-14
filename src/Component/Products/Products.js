@@ -199,11 +199,11 @@ const Products = () => {
                 <td>{product.price}</td>
                 <td>
                   <button className="tableBtn" onClick={() => editProduct(product.id)}>Edit</button>
-                  <button className="tableBtn" onClick={() => deleteProduct(product.id)}>
+                  <button style={{ backgroundColor: "#FF0000" }} className="tableBtn" onClick={() => deleteProduct(product.id)}>
                     Delete
                   </button>
                   <button className="MediaScreen" onClick={() => editProduct(product.id)}><MdEdit /></button>
-                  <button className="MediaScreen" onClick={() => deleteProduct(product.id)}>
+                  <button style={{ backgroundColor: "#FF0000" }} className="MediaScreen" onClick={() => deleteProduct(product.id)}>
                   <MdDelete />
                   </button>
                 </td>

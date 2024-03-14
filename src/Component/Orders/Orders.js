@@ -22,7 +22,7 @@ const Orders = () => {
       customerName: "Sarah Williams",
       orderDate: "2024-03-10",
       status: "Pending",
-      expectedDeliveryDate: "2024-03-17", // 7 days after order date
+      expectedDeliveryDate: "2024-03-17",
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const Orders = () => {
       customerName: "Rohan Sharma",
       orderDate: "2024-03-09",
       status: "Shipped",
-      expectedDeliveryDate: "2024-03-16", // 7 days after order date
+      expectedDeliveryDate: "2024-03-16",
     },
     {
       id: 4,
@@ -38,7 +38,7 @@ const Orders = () => {
       customerName: "David Anderson",
       orderDate: "2024-03-08",
       status: "Delivered",
-      expectedDeliveryDate: "2024-03-15", // 7 days after order date
+      expectedDeliveryDate: "2024-03-15",
     },
     {
       id: 5,
@@ -46,7 +46,7 @@ const Orders = () => {
       customerName: "Neha Gupta",
       orderDate: "2024-03-28",
       status: "Pending",
-      expectedDeliveryDate: "2024-04-04", // 7 days after order date
+      expectedDeliveryDate: "2024-04-04",
     },
     {
       id: 6,
@@ -54,7 +54,7 @@ const Orders = () => {
       customerName: "Nitin Das",
       orderDate: "2024-03-10",
       status: "Pending",
-      expectedDeliveryDate: "2024-03-17", // 7 days after order date
+      expectedDeliveryDate: "2024-03-17",
     },
     {
       id: 7,
@@ -62,7 +62,7 @@ const Orders = () => {
       customerName: "Don Williams",
       orderDate: "2024-03-11",
       status: "Shipped",
-      expectedDeliveryDate: "2024-03-18", // 7 days after order date
+      expectedDeliveryDate: "2024-03-18",
     },
     {
       id: 8,
@@ -70,7 +70,7 @@ const Orders = () => {
       customerName: "Aniket Paul",
       orderDate: "2024-03-10",
       status: "Pending",
-      expectedDeliveryDate: "2024-03-17", // 7 days after order date
+      expectedDeliveryDate: "2024-03-17",
     },
     {
       id: 9,
@@ -78,7 +78,7 @@ const Orders = () => {
       customerName: "David Anderson",
       orderDate: "2024-03-22",
       status: "Delivered",
-      expectedDeliveryDate: "2024-03-29", // 7 days after order date
+      expectedDeliveryDate: "2024-03-29",
     },
     {
       id: 10,
@@ -86,7 +86,7 @@ const Orders = () => {
       customerName: "Ankan Sarkar",
       orderDate: "2024-02-04",
       status: "Pending",
-      expectedDeliveryDate: "2024-02-11", // 7 days after order date
+      expectedDeliveryDate: "2024-02-11",
     },
     {
       id: 11,
@@ -94,7 +94,7 @@ const Orders = () => {
       customerName: "Sarah Young",
       orderDate: "2024-03-10",
       status: "Shipped",
-      expectedDeliveryDate: "2024-03-17", // 7 days after order date
+      expectedDeliveryDate: "2024-03-17",
     },
   ];
 
@@ -182,12 +182,14 @@ const Orders = () => {
                   </td>
                   <td>
                     <button
+                      style={{ backgroundColor: "#FF0000" }}
                       className="btn"
                       onClick={() => deleteOrder(order.orderId)}
                     >
                       Delete
                     </button>
                     <button
+                      style={{ backgroundColor: "#FF0000" }}
                       className="MediaScreen"
                       onClick={() => deleteOrder(order.orderId)}
                     >
@@ -214,7 +216,9 @@ const Orders = () => {
               }}
             />
             <div className="orders-list">
-              <h3>Expected Order Delivery Date for {selectedDate.toDateString()}</h3>
+              <h3>
+                Expected Order Delivery Date for {selectedDate.toDateString()}
+              </h3>
               <ul>
                 {orders.map((order) => {
                   const deliveryDate = new Date(order.expectedDeliveryDate);

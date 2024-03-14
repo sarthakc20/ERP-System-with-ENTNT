@@ -11,7 +11,7 @@ Screen Shots:
 Welcome to the Simplified ERP System built with React! This documentation will guide you through setting up and interacting with the website.
 
 *Website URL*
-You can access the website at the following URL: Simplified ERP System
+You can access the website at the following URL: https://erp-system-with-entnt.vercel.app
 
 *Setup Instructions*
 No setup is required as the website is hosted on Vercel. Simply click on the provided URL to access the ERP system.
@@ -36,7 +36,7 @@ The website consists of the following pages:
 1. Mock Data: The project uses mock data for products and orders for demonstration purposes. You can customize or replace this data with real data from your backend system.
 2. Orders Calendar View Features: The Orders Calendar View is an optional feature that provides a visual representation of orders based on their expected delivery dates.
 
-*Workflow for Creating and Building a React App*
+# *Workflow for Creating and Building a React App*
 
 # Initialize React App:
 
